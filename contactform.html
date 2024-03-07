@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Responsive Mall.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/myCustom.css">
+     <script src="/javascript/contact.js"></script>
+
+<style>
+
+    /* Style for the thank you message */
+    .thank-you-message {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+    <body>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="london.html">London</a>
+            <a href="paris.html">Paris</a>
+            <a href="tokyo.html">Tokyo</a>
+            <a href="CitiesBucketlist.html">Cities Bucketlist</a>
+            <a href="contactform.html" class="active">Contact</a>
+            <a href="survey.html">Survey</a>
+            <a href="Favorit country.html">Favorite country</a>
+    
+    
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    
+        <div class="w3-container w3-yellow">
+            <h1>Contact</h1>
+        </div>
+    
+        <div class="w3-row-padding">
+
+            <div class="w3-third">
+                    <fieldset style="width: 85%;">
+                         <legend>Your coordinates please</legend>
+
+<form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="city">City:</label>
+    <select id="city" name="city" required>
+        <option value="">Choos a City</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="London">London</option>
+        <option value="Berlin">Berlin</option>
+        <option value="Washington">Washington, D.C.</option>
+    </select><br><br>
+    <label for="message">Message:</label> <br>
+        <textarea name="message" id="message" cols="40" rows="5" required></textarea> <br>
+   
+
+    <button type="submit">Send</button>
+</form>
+
+<div class="thank-you-message">
+    <img src="images/thankyou.gif" alt="Thank You">
+</div>
+</fieldset>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#contactForm').submit(function(e) {
+            e.preventDefault();
+            
+            
+            var name = $('#name').val(); // Validera formulärfält = it shwoul not be empty
+            var email = $('#email').val();
+            var city = $('#city').val();
+            var message = $('#message').val();
+
+             
+            if (name.trim() === '' || email.trim() === '' || city.trim() === ''|| message.trim() === '') {  // what i showld to do if it is empty
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            
+            
+            setTimeout(function() // if any thinks is ok
+            {
+              $('.thank-you-message').fadeIn(function() { // Display thank you message with animation
+                });
+            });
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

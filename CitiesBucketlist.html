@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<title>Responsive Mall.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/CSS/myCustom.css">
+<script src="javascript/myCustomJs.js"></script>
+<script src="javascript/moment2.js"></script>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" >Home</a>
+          <a href="london.html">London</a>
+          <a href="paris.html" >Paris</a>
+          <a href="tokyo.html">Tokyo</a>
+          <a href="CitiesBucketlist.html" class="active">Cities Bucketlist</a>
+          <a href="contactform.html">Contact</a>
+          <a href="survey.html">Survey</a>
+          <a href="Favorit country.html" >Favorite country</a>
+
+      
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <div class="w3-container w3-red">
+        <h2>Survey</h2>
+           <p>What is your favourite city</p>              
+    </div>
+
+    <form id="survey2" name="survey2" action="" enctype="text/plain">
+      <fieldset style="width: 30%;">
+        <p id="status"></p>
+          <legend>My Cities</legend><br>
+          <form id="cityForm">
+            <label for="newCity"></label>
+            <input type="text" id="newCity">
+            <button type="button" onclick="addCity()">Add City</button><br><br>
+            
+        
+            <label for="city1"></label>
+            <input type="text" id="city1" class="locked" disabled><br>
+            <label for="city2"></label>
+            <input type="text" id="city2" class="locked" disabled><br>
+            <label for="city3"></label>
+            <input type="text" id="city3" class="locked" disabled><br>
+            <label for="city4"></label>
+            <input type="text" id="city4" class="locked" disabled><br>
+            <label for="city5"></label>
+            <input type="text" id="city5" class="locked" disabled><br>
+            
+            
+            
+            <button type="button" onclick="sortCities()">Sort Cities</button>
+            <input type="reset" value="Reset">
+        
+        </form>
+
+
+
+
+
+
+
+</body>
+</html>
